@@ -66,10 +66,6 @@ h2 {
   margin-top: 70px;
 }
 
-.stats-container__stat {
-  /* background-color: royalblue; */
-}
-
 .stats-container__stat__value {
   color: hsl(0, 0%, 100%);
   display: block;
@@ -84,6 +80,24 @@ h2 {
   font-size: 12px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1256px) and (min-width: 1081px) {
+  .card-container__text-container {
+    padding: 48px;
+  }
+
+  .stats-container {
+    margin-top: 32px;
+  }
+
+  .stats-container__stat__value {
+    font-size: 18px;
+  }
+
+  .stats-container__stat__header {
+    font-size: 10px;
+  }
 }
 
 @media only screen and (max-width: 1080px) {

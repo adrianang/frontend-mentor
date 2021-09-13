@@ -5,31 +5,36 @@
 
 body {
   background-color: hsl(233, 47%, 7%);
-  margin: 100px 0 0 0;
 }
 
-h2,
+h1,
 .card-container__text-container p,
 .stats-container__stat__value {
   font-family: 'Inter', sans-serif;
 }
 
-h2,
+h1,
 .stats-container__stat__value {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
 
-h2 {
+h1 {
   color: hsl(0, 0%, 100%);
   font-size: 32px;
   margin: 0 0 20px 0;
 }
 
+.vertical-aligner,
 .card-container,
 .card-container__text-container,
 .stats-container {
   display: flex;
+}
+
+.vertical-aligner,
+.card-container__text-container {
+  flex-direction: column;
 }
 
 .card-container,
@@ -37,19 +42,25 @@ h2 {
   flex-direction: row;
 }
 
+.vertical-aligner {
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  min-height: 600px;
+  overflow: auto;
+}
+
 .card-container {
   background-color: hsl(244, 38%, 16%);
   border-radius: 15px;
   overflow: hidden;
-  margin: auto;
   width: 77%;
 }
 
 .card-container__text-container {
   box-sizing: border-box;
-  flex-direction: column;
   justify-content: center;
-  padding: 50px 100px 50px 80px;
+  padding: 50px 80px 50px 60px;
   width: 50%;
 }
 
@@ -61,7 +72,7 @@ h2 {
 
 .card-container__image-container {
   background-color: hsl(277, 64%, 61%);
-  min-width: 50%;
+  width: 50%;
 }
 
 .card-container__image-container img {
@@ -114,7 +125,7 @@ h2 {
   background-color: hsl(277, 64%, 61%);;
 }
 
-@media only screen and (max-width: 1256px) and (min-width: 1081px) {
+@media only screen and (max-width: 1256px) and (min-width: 981px) {
   .card-container__text-container {
     padding: 48px;
   }
@@ -132,7 +143,13 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 980px) {
+  .vertical-aligner {
+    height: auto;
+    margin: 10% 0 10% 0;
+    min-width: 400px;
+  }
+
   .card-container {
     flex-direction: column-reverse;
     width: 375px;

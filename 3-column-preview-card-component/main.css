@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-sedan: hsl(31, 77%, 52%);
+  --color-suv: hsl(184, 100%, 22%);
+  --color-luxury: hsl(179, 100%, 13%);
+  --color_white-transp: hsla(0, 0%, 100%, 0.75);
+  --color_gray: hsl(0, 0%, 95%);
+}
+
+@media (min-width: 375px) {
+  body,
+  h2 {
+    color: var(--color_gray);
+  }
+
+  img,
+  h2,
+  p {
+    padding: 0 0 1.5rem 0;
+  }
+
+  h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.625rem;
+    text-transform: uppercase;
+  }
+
+  p,
+  button {
+    font-family: 'Lexend Deca', sans-serif;
+  }
+
+  p {
+    color: var(--color_white-transp);
+    font-size: 0.9375rem;
+    line-height: 1.75;
+  }
+
+  .vertical-aligner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 1500px;
+  }
+
+  .card-container {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card {
+    padding: 50px;
+    width: 225px;
+  }
+
+  .card--sedan {
+    background-color: var(--color-sedan);
+  }
+
+  .card--suv {
+    background-color: var(--color-suv);
+  }
+
+  .card--luxury {
+    background-color: var(--color-luxury);
+  }
+
+  button {
+    border: 3px solid var(--color_gray);
+    border-radius: 32px;
+    padding: 18px 32px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: var(--color_white-transp);
+  }
+
+  button:active {
+    background-color: hsla(0, 0%, 100%, 0.0);
+    color: var(--color_gray);
+  }
+
+  .button--sedan {
+    color: var(--color-sedan);
+  }
+
+  .button--suv {
+    color: var(--color-suv);
+  }
+
+  .button--luxury {
+    color: var(--color-luxury);
+  }
+}

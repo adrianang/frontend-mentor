@@ -40,9 +40,13 @@
     line-height: 1.75;
   }
 
-  .vertical-aligner {
+  .vertical-aligner,
+  .card-container {
     display: flex;
     flex-direction: column;
+  }
+
+  .vertical-aligner {
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -97,5 +101,20 @@
 
   .button--luxury {
     color: var(--color-luxury);
+  }
+}
+
+@media (min-width: 992px) {
+  .vertical-aligner {
+    min-height: 500px;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .card {
+    padding: 48px;
+    width: 210px;
   }
 }

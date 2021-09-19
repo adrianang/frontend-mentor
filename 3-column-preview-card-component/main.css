@@ -7,114 +7,156 @@
   --color-sedan: hsl(31, 77%, 52%);
   --color-suv: hsl(184, 100%, 22%);
   --color-luxury: hsl(179, 100%, 13%);
-  --color_white-transp: hsla(0, 0%, 100%, 0.75);
-  --color_gray: hsl(0, 0%, 95%);
+  --color-white-transp: hsla(0, 0%, 100%, 0.75);
+  --color-gray: hsl(0, 0%, 95%);
+}
+
+body,
+h2 {
+  color: var(--color-gray);
+}
+
+img,
+h2,
+p {
+  padding: 0 0 1.5rem 0;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 2.625rem;
+  text-transform: uppercase;
+}
+
+p,
+button,
+.attribution {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+p {
+  color: var(--color-white-transp);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.vertical-aligner,
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-aligner {
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 5.5rem 0;
+}
+
+.card-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 3.125rem;
+  width: 325px;
+}
+
+.card--sedan {
+  background-color: var(--color-sedan);
+}
+
+.card--suv {
+  background-color: var(--color-suv);
+}
+
+.card--luxury {
+  background-color: var(--color-luxury);
+}
+
+button {
+  border: 3px solid var(--color-gray);
+  border-radius: 32px;
+  padding: 1.125rem 2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--color-white-transp);
+}
+
+button:active {
+  background-color: hsla(0, 0%, 100%, 0.0);
+  color: var(--color-gray);
+}
+
+.button--sedan {
+  color: var(--color-sedan);
+}
+
+.button--suv {
+  color: var(--color-suv);
+}
+
+.button--luxury {
+  color: var(--color-luxury);
+}
+
+.attribution {
+  color: var(--color-luxury);
+  font-size: 9px;
+  margin: 12px 0 0 0;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-luxury);
+}
+
+.attribution a:hover {
+  color: var(--color-suv);
+}
+
+.attribution a:active {
+  color: var(--color-sedan);
 }
 
 @media (min-width: 375px) {
-  body,
-  h2 {
-    color: var(--color_gray);
-  }
-
-  img,
-  h2,
-  p {
-    padding: 0 0 1.5rem 0;
-  }
-
-  h2 {
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-size: 2.625rem;
-    text-transform: uppercase;
-  }
-
-  p,
-  button {
-    font-family: 'Lexend Deca', sans-serif;
-  }
-
-  p {
-    color: var(--color_white-transp);
-    font-size: 0.9375rem;
-    line-height: 1.75;
-  }
-
-  .vertical-aligner,
   .card-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .vertical-aligner {
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    min-height: 1500px;
-  }
-
-  .card-container {
-    border-radius: 8px;
-    overflow: hidden;
+    width: 86.67%;
   }
 
   .card {
-    padding: 50px;
-    width: 225px;
-  }
-
-  .card--sedan {
-    background-color: var(--color-sedan);
-  }
-
-  .card--suv {
-    background-color: var(--color-suv);
-  }
-
-  .card--luxury {
-    background-color: var(--color-luxury);
-  }
-
-  button {
-    border: 3px solid var(--color_gray);
-    border-radius: 32px;
-    padding: 18px 32px;
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  button:hover {
-    background-color: var(--color_white-transp);
-  }
-
-  button:active {
-    background-color: hsla(0, 0%, 100%, 0.0);
-    color: var(--color_gray);
-  }
-
-  .button--sedan {
-    color: var(--color-sedan);
-  }
-
-  .button--suv {
-    color: var(--color-suv);
-  }
-
-  .button--luxury {
-    color: var(--color-luxury);
+    width: 100%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  p {
+    padding: 0 0 5.5rem 0;
+  }
+
   .vertical-aligner {
-    min-height: 500px;
+    height: 100vh;
+    min-height: 550px;
+    padding: 0;
   }
 
   .card-container {
     flex-direction: row;
+    width: 92%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-container {
+    width: auto;
   }
 
   .card {
-    padding: 48px;
-    width: 210px;
+    padding: 3rem;
+    width: 306px;
   }
 }

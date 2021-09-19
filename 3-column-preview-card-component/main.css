@@ -9,6 +9,9 @@
   --color-luxury: hsl(179, 100%, 13%);
   --color-white-transp: hsla(0, 0%, 100%, 0.75);
   --color-gray: hsl(0, 0%, 95%);
+
+  --font-header: 'Big Shoulders Display', sans-serif;
+  --font-body-copy: 'Lexend Deca', sans-serif;
 }
 
 body,
@@ -23,7 +26,7 @@ p {
 }
 
 h2 {
-  font-family: 'Big Shoulders Display', sans-serif;
+  font-family: var(--font-header);
   font-size: 2.625rem;
   text-transform: uppercase;
 }
@@ -31,7 +34,7 @@ h2 {
 p,
 button,
 .attribution {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: var(--font-body-copy);
 }
 
 p {
@@ -80,7 +83,8 @@ button {
   border: 3px solid var(--color-gray);
   border-radius: 32px;
   padding: 1.125rem 2rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out;
 }
 
 button:hover {
@@ -123,6 +127,15 @@ button:active {
   color: var(--color-sedan);
 }
 
+.sr-only { /* hides element visually while keeping its place in document flow for screen readers */
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 @media (min-width: 375px) {
   .card-container {
     width: 86.67%;
@@ -140,7 +153,7 @@ button:active {
 
   .vertical-aligner {
     height: 100vh;
-    min-height: 550px;
+    min-height: 660px;
     padding: 0;
   }
 

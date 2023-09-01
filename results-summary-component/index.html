@@ -10,72 +10,73 @@
   <script src="https://cdn.tailwindcss.com/"></script>
   <script src="./tailwind.config.js"></script>
 </head>
-<body class="font-hanken">
-  <section class="your-result w-full text-center bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-3xl p-10" id="your-result">
-    <h2 class="result-header text-lightLavender text-lg font-bold mb-4">Your Result</h2>
-    <div class="result-circle flex flex-col justify-center w-36 h-36 mx-auto rounded-full bg-gradient-to-b from-violetBlue to-persianBlue mb-4">
-      <span class="result-aggregate text-5xl text-white font-extrabold mb-2">76</span>
-      <p class="result-max text-lightLavender">of 100</p>
-    </div>
-    <div class="result-level text-paleBlue text-2xl font-bold mb-2">
-      Great
-    </div>
-    <div class="result-percentile text-lightLavender text-base">
-      You scored higher than 65% of the people who have taken these tests.
-    </div>
-  </section>
-
-  <section class="summary flex flex-col w-full p-8" id="summary">
-    <h2 class="summary-header text-lg font-bold mb-6">Summary</h2>
-    <div class="category flex bg-lightRed/10 text-base font-bold rounded-xl p-4 mb-4">
-      <img src="./assets/images/icon-reaction.svg"
-           alt="Reaction icon"
-           class="mr-4"/>
-      <div class="category-title text-lightRed">Reaction</div>
-      <div class="category-score ml-auto">
-        <span class="text-darkGrayBlue mr-1">80</span>
-        <span class="text-darkGrayBlue/50">/</span>
-        <span class="text-darkGrayBlue/50">100</span>
+<body class="font-hanken sm:flex sm:items-center sm:justify-center sm:h-screen">
+  <div class="sm:flex sm:flex-row sm:w-[738px] sm:h-[512px] sm:rounded-3xl sm:shadow-[12px_12px_36px_hsla(252,100%,67%,0.1)]">
+    <section class="your-result w-full sm:w-1/2 text-center bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue rounded-b-3xl sm:rounded-3xl p-10" id="your-result">
+      <h2 class="result-header text-lightLavender text-lg sm:text-xl font-bold mb-6">Your Result</h2>
+      <div class="result-circle flex flex-col justify-center w-36 h-36 sm:w-52 sm:h-52 mx-auto rounded-full bg-gradient-to-b from-violetBlue to-persianBlue mb-6">
+        <span class="result-aggregate text-5xl sm:text-7xl text-white font-extrabold mb-2">76</span>
+        <p class="result-max text-lightLavender/50 sm:text-base">of 100</p>
       </div>
-    </div>
-    <div class="category flex bg-orangeyYellow/10 text-base font-bold rounded-xl p-4 mb-4">
-      <img src="./assets/images/icon-memory.svg"
-           alt="Memory icon"
-           class="mr-4"/>
-      <div class="category-title text-orangeyYellow">Memory</div>
-      <div class="category-score ml-auto">
-        <span class="text-darkGrayBlue font-extrabold mr-1">92</span>
-        <span class="text-darkGrayBlue/50">/</span>
-        <span class="text-darkGrayBlue/50">100</span>
+      <div class="result-level text-paleBlue text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+        Great
       </div>
-    </div>
-    <div class="category flex bg-greenTeal/10 text-base font-bold rounded-xl p-4 mb-4">
-      <img src="./assets/images/icon-verbal.svg"
-           alt="Verbal icon"
-           class="mr-4"
-           />
-      <div class="category-title text-greenTeal">Verbal</div>
-      <div class="category-score ml-auto">
-        <span class="text-darkGrayBlue font-extrabold mr-1">61</span>
-        <span class="text-darkGrayBlue/50">/</span>
-        <span class="text-darkGrayBlue/50">100</span>
+      <div class="result-percentile text-lightLavender text-base sm:text-lg sm:px-4">
+        You scored higher than 65% of the people who have taken these tests.
       </div>
-    </div>
-    <div class="category flex bg-cobaltBlue/10 text-base font-bold rounded-xl p-4 mb-6">
-      <img src="./assets/images/icon-visual.svg"
-           alt="Visual icon"
-           class="mr-4"
-           />
-      <div class="category-title text-cobaltBlue">Visual</div>
-      <div class="category-score ml-auto">
-        <span class="text-darkGrayBlue font-extrabold mr-1">72</span>
-        <span class="text-darkGrayBlue/50">/</span>
-        <span class="text-darkGrayBlue/50">100</span>
+    </section>
+  
+    <section class="summary flex flex-col w-full sm:w-1/2 p-8 sm:p-10" id="summary">
+      <h2 class="summary-header text-lg sm:text-xl font-bold mb-6">Summary</h2>
+      <div class="category flex bg-lightRed/10 text-base font-bold rounded-xl p-4 mb-4">
+        <img src="./assets/images/icon-reaction.svg"
+             alt="Reaction icon"
+             class="mr-4"/>
+        <div class="category-title text-lightRed">Reaction</div>
+        <div class="category-score ml-auto">
+          <span class="text-darkGrayBlue mr-1">80</span>
+          <span class="text-darkGrayBlue/50">/</span>
+          <span class="text-darkGrayBlue/50">100</span>
+        </div>
       </div>
-    </div>
-    <button class="btn bg-darkGrayBlue text-white text-lg font-medium rounded-full p-4">
-      Continue
-    </button>
-  </section>
+      <div class="category flex bg-orangeyYellow/10 text-base font-bold rounded-xl p-4 mb-4">
+        <img src="./assets/images/icon-memory.svg"
+             alt="Memory icon"
+             class="mr-4"/>
+        <div class="category-title text-orangeyYellow">Memory</div>
+        <div class="category-score ml-auto">
+          <span class="text-darkGrayBlue font-extrabold mr-1">92</span>
+          <span class="text-darkGrayBlue/50">/</span>
+          <span class="text-darkGrayBlue/50">100</span>
+        </div>
+      </div>
+      <div class="category flex bg-greenTeal/10 text-base font-bold rounded-xl p-4 mb-4">
+        <img src="./assets/images/icon-verbal.svg"
+             alt="Verbal icon"
+             class="mr-4"
+             />
+        <div class="category-title text-greenTeal">Verbal</div>
+        <div class="category-score ml-auto">
+          <span class="text-darkGrayBlue font-extrabold mr-1">61</span>
+          <span class="text-darkGrayBlue/50">/</span>
+          <span class="text-darkGrayBlue/50">100</span>
+        </div>
+      </div>
+      <div class="category flex bg-cobaltBlue/10 text-base font-bold rounded-xl p-4 mb-6 sm:mb-10">
+        <img src="./assets/images/icon-visual.svg"
+             alt="Visual icon"
+             class="mr-4"
+             />
+        <div class="category-title text-cobaltBlue">Visual</div>
+        <div class="category-score ml-auto">
+          <span class="text-darkGrayBlue font-extrabold mr-1">72</span>
+          <span class="text-darkGrayBlue/50">/</span>
+          <span class="text-darkGrayBlue/50">100</span>
+        </div>
+      </div>
+      <button class="btn bg-darkGrayBlue sm:hover:bg-gradient-to-b sm:from-lightSlateBlue sm:to-lightRoyalBlue text-white text-lg font-medium rounded-full p-4">
+        Continue 
+      </button>
+    </section>
 </body>
 </html>
